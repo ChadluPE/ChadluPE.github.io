@@ -1,0 +1,147 @@
+/* --- RESET --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #5d8233; /* Verde marca */
+    color: white;
+}
+
+/* --- NAVBAR (Alineada a la derecha) --- */
+/* --- NAVBAR UNIFICADA (Links a la derecha) --- */
+.navbar {
+    background-color: #5d8233; /* El verde de tu marca */
+    padding: 20px 50px;
+    display: flex;
+    justify-content: flex-end; /* Esto empuja todo a la derecha */
+    width: 100%;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 30px; /* Espacio entre cada link */
+    font-size: 1.1rem;
+    font-weight: 500;
+    font-family: 'Segoe UI', Arial, sans-serif; /* Tipografía limpia */
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    opacity: 0.7; /* Efecto suave al pasar el mouse */
+}
+
+/* --- RESPONSIVO PARA EL BAR (Para que en celular no se vea mal) --- */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 20px;
+        justify-content: center; /* En móvil se centra para que quepa mejor */
+    }
+    
+    .nav-links {
+        display: flex;
+        gap: 15px;
+    }
+    
+    .nav-links a {
+        margin-left: 0;
+        font-size: 0.9rem;
+    }
+}
+
+/* --- CONTENIDO SOBRE NOSOTROS --- */
+.about-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.intro-text h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.intro-text p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+/* Grid de Misión y Visión */
+.mission-vision-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.info-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: left;
+}
+
+.info-card h2 {
+    color: #a8d672;
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+}
+
+.info-card p {
+    font-size: 1.05rem;
+    line-height: 1.5;
+}
+
+/* Valores y Botón */
+.values-highlight p {
+    font-style: italic;
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+}
+
+.badges {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.badges span {
+    background: #a8d672;
+    color: #2d4116;
+    padding: 8px 15px;
+    border-radius: 50px;
+    font-weight: bold;
+}
+
+.btn-return {
+    display: inline-block;
+    background-color: #a8d672;
+    color: #2d4116;
+    padding: 15px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+/* Imagen Final */
+.featured-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 30px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .mission-vision-grid { grid-template-columns: 1fr; }
+    .intro-text h1 { font-size: 2.5rem; }
+}
