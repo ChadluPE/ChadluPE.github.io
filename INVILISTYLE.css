@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #5d8233; /* El verde de tu imagen */
+    color: white;
+    text-align: center;
+}
+
+/* Menú Superior */
+/* --- NAVBAR UNIFICADA (Links a la derecha) --- */
+.navbar {
+    background-color: #5d8233; /* El verde de tu marca */
+    padding: 20px 50px;
+    display: flex;
+    justify-content: flex-end; /* Esto empuja todo a la derecha */
+    width: 100%;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 30px; /* Espacio entre cada link */
+    font-size: 1.1rem;
+    font-weight: 500;
+    font-family: 'Segoe UI', Arial, sans-serif; /* Tipografía limpia */
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    opacity: 0.7; /* Efecto suave al pasar el mouse */
+}
+
+/* --- RESPONSIVO PARA EL BAR (Para que en celular no se vea mal) --- */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 20px;
+        justify-content: center; /* En móvil se centra para que quepa mejor */
+    }
+    
+    .nav-links {
+        display: flex;
+        gap: 15px;
+    }
+    
+    .nav-links a {
+        margin-left: 0;
+        font-size: 0.9rem;
+    }
+}
+
+/* Grid principal para centrar todo horizontalmente */
+.main-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 40px 20px;
+    flex-wrap: wrap;
+}
+
+/* Tarjetas de imágenes laterales */
+.card {
+    width: 350px;
+    height: 450px;
+    background: white;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* LOGO CIRCULAR (Lo que pediste) */
+.logo-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.circular-logo {
+    width: 150px;           /* Tamaño fijo para que sea un círculo */
+    height: 150px;
+    background-color: #a8d672; /* Color verde claro */
+    border-radius: 50%;      /* Círculo perfecto */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border: 5px solid rgba(255,255,255,0.1);
+}
+
+.circular-logo img {
+    width: 75%;             /* Logo interno sin tocar bordes */
+    height: 75%;
+    object-fit: contain;
+}
+
+.brand-name {
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 1.2rem;
+}
+
+/* Textos y Botones inferiores */
+.content h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.content p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    opacity: 0.8;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn {
+    padding: 15px 35px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-filled {
+    background-color: #a8d672;
+    color: #2d4116;
+}
+
+.btn-outline {
+    border: 2px solid white;
+    color: white;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
